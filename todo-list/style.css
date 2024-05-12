@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    background-color: #f4f4f4;
+    color: black;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #form {
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #form button {
+    background-color: #0074d9;
+    border: none;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #form button:hover {
+    transition: ease-in-out 0.1s;
+    background-color: #1793ff;
+  }
+  
+  #task-title {
+    width: 12rem;
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+  
+  #task-description {
+    resize: vertical;
+    padding: 0.5rem;
+    width: 12rem;
+    font-size: 16px;
+  }
+  
+  #task-list li {
+    text-align: left;
+  }
+  
+  #task-list {
+    padding: 1rem;
+    list-style: none;
+  }
+  
+  #task-list li {
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  #task-list h3 {
+    padding: 1rem;
+  }
+  
+  #task-list p {
+    padding: 1rem;
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+  }
+  

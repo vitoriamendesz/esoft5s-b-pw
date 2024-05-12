@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+    <main>
+      <form id="form">
+        <input
+          type="text"
+          name="task-title"
+          id="task-title"
+          placeholder="Título da tarefa"
+        />
+        <textarea
+          name="task-description"
+          id="task-description"
+          placeholder="Descrição da tarefa"
+        ></textarea>
+        <button type="submit">Salvar Tarefa</button>
+      </form>
+      <ul id="task-list"></ul>
+    </main>
+    <footer aria-label="Rodapé">
+      <p aria-label="Copyright">&copy; 2024 Todo List.</p>
+      <p id="times-visited"></p>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
