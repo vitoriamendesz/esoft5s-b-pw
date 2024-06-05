@@ -1,11 +1,10 @@
-
 function changePageTitle(title) {
   document.title = title
 }
 
 function generateInfoSection(sprites, pokemonName) {
   const imagens = Object.values(sprites)
-      .filter(sprite => typeof sprite === 'string')
+    .filter(sprite => typeof sprite === 'string')
 
   const h2 = document.createElement('h2')
   h2.id = "info-pokemon-label"
@@ -23,8 +22,8 @@ function generateInfoSection(sprites, pokemonName) {
   let indiceAtual = 0;
 
   img.addEventListener('click', () => {
-      indiceAtual = (indiceAtual + 1) % imagens.length;
-      img.src = imagens[indiceAtual];
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+    img.src = imagens[indiceAtual];
   });
 }
 
@@ -38,20 +37,20 @@ async function getPokemonData(name) {
   //   .catch((error) => console.error(error))
 
   try {
-      const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
 
-      const jsonData = await data.json()
+    const jsonData = await data.json()
 
-      generateInfoSection(jsonData.sprites, name)
+    generateInfoSection(jsonData.sprites, name)
   } catch (error) {
-      console.error(error)
+    console.error(error)
   }
 }
 
 function getSearchParams() {
   // Early return -> Caso location search, não faz nada.
   if (!location.search) {
-      return
+    return
   }
 
   // URLSearchParams é uma classe que facilita a manipulação de query strings
